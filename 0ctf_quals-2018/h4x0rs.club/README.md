@@ -72,4 +72,9 @@ if(location.hash.slice(1) == 'report'){
 Then you make `redirect.html` redirect the admin again to your final payload, which will start the game and trigger the XSS, sending his session (and the flag) back to you.
 
 ## Flag
-`flag{postman_1n_the_middl3}`
+
+```flag{postman_1n_the_middl3}```
+
+### Contact
+
+If you have any questions feel free to contanct me on [@lbherrera_](https://twitter.com/lbherrera_)

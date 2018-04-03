@@ -27,7 +27,7 @@ Then, theoretically, by accessing `https://h4x0rs.club/game/?msg=<div id="audien
 
 But it doesn't, we are stopped by Chrome's XSS auditor which blocks the access to the page because it detected that a `script` tag on the URL was also reflected into the page.
 
-We can bypass it by sending `https://h4x0rs.club/game/?msg=<div id="audiences"><script><!--alert(1);</div></div></div><div class="js-user"></div>` which isn't executed by the browser, but when appended by JQuery through the `append` function will surprisingly ignore the `<!--`
+We can bypass it by sending `https://h4x0rs.club/game/?msg=<div id="audiences"><script><!--alert(1);</div></div></div><div class="js-user"></div>` which isn't executed by the browser, but when appended by JQuery through the `append` function, will, surprisingly, ignore the `<!--`
 and add our tag to the `js-user` div.
 
 ### Triggering the XSS

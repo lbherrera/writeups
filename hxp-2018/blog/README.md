@@ -74,7 +74,7 @@ At this point, it seemed like we had hit a dead end. How were we supposed to det
 
 After a thorough analyzis of the code, we found our answer. Let's check it line by line:
 
-```
+```php
 1.   <script>
 2.       $('#logo').attr('src', $('body').data('logo'))
 3.       $('#name').text($('body').data('name'))

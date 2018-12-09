@@ -23,7 +23,7 @@ Upon entering the challenge's website we were presented with what appeared to be
 The first thing we tried was to report our website to see whether the admin accessed it, and of course they didn't.
 
 From reading the source code (that was given in the description) we got that it was only possible to send blogs (using the id parameter) to the admin, which eliminated several attack vectors.
-```
+```php
 if (isset($_POST['report']) && !empty($_POST['c']) && hash_equals($_SESSION['c'], $_POST['c']) && preg_match('/^http:\/\/127.0.0.1\/\?id=[0-9a-f]{8}-[0-9a-f]{4}-[4][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/', $_POST['report'])){
     include 'backend.php';
     send_to_admin($_POST['report']);
@@ -34,7 +34,7 @@ if (isset($_POST['report']) && !empty($_POST['c']) && hash_equals($_SESSION['c']
 After quickly analyzing the server's source code (and not finding any vulnerabilities) we decided to move on and analyze the application's HTML.
 
 At the end of the page there was the following javascript, which immediately caught our attention:
-```
+```javascript
 if (!$('#news-container').html())
     $.each($('body').data('posts'),function(i,d) {
         $('#news-container').html($('#news-container').html()+$('#template').html() )
@@ -74,7 +74,7 @@ At this point, it seemed like we had hit a dead end. How were we supposed to det
 
 After a thorough analyzis of the code, we found our answer. Let's check it line by line:
 
-```php
+```javascript
 1.   <script>
 2.       $('#logo').attr('src', $('body').data('logo'))
 3.       $('#name').text($('body').data('name'))

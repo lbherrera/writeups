@@ -38,12 +38,12 @@ At the end of the page there was the following javascript, which immediately cau
 if (!$('#news-container').html())
     $.each($('body').data('posts'),function(i,d) {
         $('#news-container').html($('#news-container').html()+$('#template').html() )
-            $('#news-container .post:last .text ').text(d.text)
-            $('#news-container .post:last .icon').attr("src",d.icon)
-            $('#news-container .post:last .icon').attr("src",d.icon)
-            $('#news-container .post:last .link').attr("href",d.url)
-            $('#news-container .post:last').attr("id","post-"+d.id)
-        })
+        $('#news-container .post:last .text ').text(d.text)
+        $('#news-container .post:last .icon').attr("src",d.icon)
+        $('#news-container .post:last .icon').attr("src",d.icon)
+        $('#news-container .post:last .link').attr("href",d.url)
+        $('#news-container .post:last').attr("id","post-"+d.id)
+    })
     $(location.hash).addClass('highlight')
 ```
 

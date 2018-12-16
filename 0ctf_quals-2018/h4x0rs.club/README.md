@@ -77,4 +77,4 @@ Then you make `redirect.html` redirect the admin again to your final payload, wh
 
 ## Contact
 
-If you have any questions feel free to contanct me on [@lbherrera_](https://twitter.com/lbherrera_)
+If you have any questions feel free to contact me on [@lbherrera_](https://twitter.com/lbherrera_)

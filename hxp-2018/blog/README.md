@@ -153,4 +153,4 @@ What is left is automating this process and then leak the full flag.
 
 ## Contact
 
-If you have any questions feel free to contanct me on [@lbherrera_](https://twitter.com/lbherrera_)
+If you have any questions feel free to contact me on [@lbherrera_](https://twitter.com/lbherrera_)
